@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# remove this script, the grep line then count the lines
+no=`ps -o command -A | grep "$1" | grep -v /bin/sh | grep -v grep | wc -l`
+ret=-1
+if [ $no -eq 1 ]; then
+	ret=0
+fi
+exit $ret

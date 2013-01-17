@@ -1,0 +1,4 @@
+#!/bin/sh
+
+gcc -I ../lua5.1/include/ -O2 -fno-common -c *.c
+gcc -framework Carbon -bundle -Wl,-bind_at_load -undefined dynamic_lookup -o ../LightroomTether.lrplugin/PTP/PTP-OSX.so *.o
